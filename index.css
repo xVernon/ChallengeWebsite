@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #008000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+  background-color: #008000;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+    height: 40px;
+    background-color: #808000;
+    border: 2px solid #000000;
+    margin-bottom: 20px;
+}
+
+.first-block {
+    position: absolute;
+    rotate:calc(45deg);
+    height: 160px;
+    width: 192px;
+    top: 80px;
+    left: 35px;
+}
+
+.second-block {
+    position: absolute;
+    height: 160px;
+    width: 192px;
+}
+
+.square {
+    background-color: #ff0000;
+    border: 2px solid #000000;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+}
+
+.rectangle {
+    background-color: #0000ff;
+    width: 120px;
+    height: 20px;
+    margin: 4px;
+    border: 2px solid #000000;
+    position: sticky;
+}
+
+.circle {
+    background-color: #008080;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.field-text {
+    background-color: white;
+    border: 2px solid #000000;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+}
+
+.container > div {
+  transition: all 0.5s ease-in-out;
+}
+
+/* RESPONSYWNOŚĆ */
+
+/* < 583px: Układ pionowy */
+@media (max-width: 582px) {
+  .first-block { top: 80px; left: 35px; }
+  .second-block { top: 240px; left: 10px; }
+  .field-text {
+    background-color: #0000ff;
+    top: 50%;
+    left: 10px;
+    width: 95%;
+    height: 45%;
+  }
+}
+
+/* 583px - 900px: Układ bardziej zwarty */
+@media (min-width: 583px) and (max-width: 900px) {
+  .first-block { top: 80px; left: 35px; }
+  .second-block { top: 300px; left: 10px; }
+  .field-text {
+    top: 80px;
+    right: 20px;
+    width:40%;
+    background-color: #d64161;
+  }
+}
+
+/* > 900px: Układ poziomy */
+@media (min-width: 901px) {
+  .first-block { top: 80px; left: 35px; }
+  .second-block { top: 100px; left: 50%; }
+  .field-text {
+    top: 80px;
+    right: 20px;
+    width: 20%;
+    height: 85%;
+    background-color: white;
+    color: black;
+  }
+}
